@@ -1,14 +1,19 @@
 
 /* commons */
-body {
+:root {
+    --brand-color: #2196F3;
+    --main-text-color: #212121;
+    --secondary-color: #FFFFFF;
     font-family: 'Roboto';
     font-style: normal;
+}
+body {
     width: 1600px;
     margin: auto;
-    background: #E5E5E5;
+    background-color: #E5E5E5;
 }
 main {
-    background-color: #FFFFFF;
+    background-color: var(--secondary-color);
     margin-top: -14px;
     padding-bottom: 100px;
 }
@@ -17,7 +22,7 @@ p {
     font-size: 16px;
     line-height: 30px;
     letter-spacing: 0.03em;
-    color: #241111;
+    color: #757575;
     margin-left: 20px;
 }
 h1 {
@@ -26,7 +31,7 @@ h1 {
     line-height: 60px;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: var(--secondary-color);
     padding-top: 200px;
 }
 
@@ -36,7 +41,7 @@ h2 {
     line-height: 42px;
     text-align: center;
     letter-spacing: 0.03em;
-    color: #212121;
+    color: var(--main-text-color);
     padding-top: 100px;
 }
 h3 {
@@ -44,7 +49,7 @@ h3 {
     font-size: 18px;
     line-height: 36px;
     letter-spacing: 0.06em;
-    color: #212121;
+    color: var(--main-text-color);
     margin-left: 20px; 
     margin-bottom: -5px; 
 }
@@ -52,15 +57,20 @@ a {text-decoration: none;}
 li {
     list-style-type: none;
 }
+/*---
+.current {           
+    color: var(--brand-color);
+} invalid---*/
+
 /* ------------- header --------------- */
 .Web {
-    color: #2196F3;
+    color: var(--brand-color);
 }
 .Studio-header {
-    color: #212121;
+    color: var(--main-text-color);
 }
 .Studio-footer {
-    color: #ffff;
+    color: var(--secondary-color);
 }
 .logo {
     font-family: 'Raleway';
@@ -71,7 +81,8 @@ li {
     letter-spacing: 0.03em;
     margin: 10px 95px 10px 215px ;
 }
-.logo:hover {
+.logo:hover,
+.logo:focus {
     text-decoration: underline;
 }
 .menu {
@@ -79,7 +90,7 @@ li {
     display: inline-block ;
     display: flex ;
     padding: 0px;
-    background-color: #FFFFFF;
+    background-color: var(--secondary-color);
 }
 .main-menu {
     display: inline-block;
@@ -91,11 +102,15 @@ li {
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.02em;
-    color: #212121;
+    color: var(--main-text-color);
     margin: 35px 25px;
 }
-.menu-item:hover {
-    color: #2196F3;
+.menu-item:hover,
+.menu-item:focus {
+    color: var(--brand-color);
+}
+.menu-item.current {
+    color: var(--brand-color);
 }
 .contacts {
     display: inline-block;
@@ -108,18 +123,20 @@ li {
     margin-top: 20px;
 }
 #mail {
-    color: #2196F3;
+    color: var(--brand-color);
     margin: 0px 25px;
 }
-#mail:hover {
+#mail:hover,
+#mail:focus {
     text-decoration: underline;
 }
 #tel {
     color: #757575;
     margin: 0px 25px;
 }
-#tel:hover {
-    color: #2196F3;
+#tel:hover,
+#tel:focus {
+    color: var(--brand-color);
 }
 section {
     margin: -35px auto;
@@ -136,18 +153,17 @@ section {
     height: 50px;
     left: 700px;
     top: 430px;
-    color: #FFFFFF;
+    color: var(--secondary-color);
     background: hsl(207, 90%, 54%);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 30px;
     cursor: pointer;
 }
-.bg>button:hover { background: #757575;
+.bg>button:hover,
+.bg>button:focus { background: #757575;
 }
 
 /* ----------- index-about ----------- */
@@ -200,7 +216,9 @@ section {
         margin-left: 400px;
         margin-bottom: 50px;
         padding-top: 100px;
-        background-color: #FFFFFF;
+}
+.filter:current {
+    color: var(--brand-color)
 }
 button {
     width: 130px;
@@ -211,11 +229,24 @@ button {
     border-radius: 4px;
     border: none;
     margin: 10px; 
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--main-text-color);
 }
-button:hover {
-    background-color: #2196F3;
+button:hover,
+button:focus {
+    color: var(--secondary-color);
+    background-color: var(--brand-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
+    0px 1px 2px rgba(0, 0, 0, 0.08), 
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-color: var(--brand-color);
     cursor: pointer;
 }
+/* ----------- portfolio-example ------------ */
 .examples {
     display: inline-block;
     display: flex;
@@ -225,7 +256,7 @@ button:hover {
     border: 1px solid #EEEEEE;
     margin: 15px;
 }
-/* ----------- portfolio-example ------------ */
+/* -------------- footer -------------- */
 footer {
     background-color: #2F303A;
     height: 250px;
@@ -238,10 +269,11 @@ footer {
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
-    color: #FFFFFF;
+    color: var(--secondary-color);
 }
-.address:hover .address-point {
-    color: #2196F3;
+.address-point:hover,
+.address-point:focus {
+    color: var(--brand-color);
 }
 .address>li{ 
     padding-left: 180px;
