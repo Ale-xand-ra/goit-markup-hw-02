@@ -42,7 +42,7 @@ h2 {
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--main-text-color);
-    padding-top: 100px;
+    padding-top: 95px;
 }
 h3 {
     font-weight: 700;
@@ -168,19 +168,27 @@ section {
 
 /* ----------- index-about ----------- */
 .about-us {
-    height: 300px;
+    height: 250px;
+    padding: 0px 200px;
 }
 .about {
     display: inline-block;
     display: flex;
-    padding: 40px 0px;
-    text-align: left;
-    margin: 0px 215px;
+    padding: 95px 0px 0px 0px;
 }
 .item-about {
     width: 300px;
-    margin: 25px;
+    margin: 25px 10px;
 }
+.item-about>p {
+    font-size: 14px;
+    line-height: 24px;
+}
+.item-about>h3 {
+    font-size: 14px;
+    line-height: 24px;
+}
+
 /* ----------- index-gallery ----------- */
 .gallery {
     display: inline-block;
@@ -260,8 +268,11 @@ button:focus {
 footer {
     background-color: #2F303A;
     height: 250px;
-    padding-top: 25px;
+    padding-top: 30px;
     margin-top: -60px;
+}
+.address {
+    margin-top: 30px;
 }
 .address .address-point {
     font-family: 'Roboto';
